@@ -997,6 +997,14 @@ p {
     color: #343639;
 }
 
+b {
+    font-weight: 700;
+}
+
+.entry-header {
+    display: none;
+}
+
 .site-header {
     display: flex;
     height: 15vh;
@@ -1096,4 +1104,82 @@ p {
 
 hr {
     margin: 0 10%;
+}
+
+.cta {
+    display: flex;
+    margin: 3vh 10%;
+    padding: 4vw;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+}
+
+.wpforms-title {
+    color: inherit !important; 
+    font-weight: 600 !important;
+    font-size: calc(1rem + 1.2vw) !important;
+}
+
+.wpforms-description {
+    font-size: calc(0.8rem + 0.2vw) !important;
+    font-weight: 300 !important;
+}
+
+.wpforms-field-label {
+    display: none !important;
+}
+
+.wpforms-head-container {
+    padding-bottom: 2vh !important;
+}
+
+.wpforms-field {
+    padding: 1vh 0 !important;
+}
+
+input, textarea {
+    font-size: calc(0.8rem + 0.2vw) !important;
+    font-weight: 300 !important;
+    max-width: 100% !important;
+}
+
+.entry-content, .wpforms-container {
+    margin: 0 !important;
+}
+
+.form {
+    float: left;
+    width: 60%;
+    text-align: left;
+    margin-right: 2vw;
+}
+
+.wpforms-submit {
+    width: 100% !important;
+    background-color: #2E5793 !important;
+    font-size: calc(0.8rem + 0.2vw) !important;
+}
+
+.wpforms-submit-container {
+    margin-top: 0 !important;
+    padding: 1vh 0 !important;
+}
+
+.map {
+    float: left;
+    width: 30vw;
+    margin: auto 0 auto 2vw;
+}
+
+.acf-map {
+    width: 100%;
+    height: 30vw;
+    border: #ccc solid 1px;
+    margin: 20px 0;
+}
+
+// Fixes potential theme css conflict.
+.acf-map img {
+   max-width: inherit !important;
 }

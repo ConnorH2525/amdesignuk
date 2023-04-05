@@ -141,6 +141,9 @@ function amconsult_scripts() {
 	wp_enqueue_style( 'amconsult-style', get_stylesheet_uri(), array(), rand(111,9999) );
 	wp_style_add_data( 'amconsult-style', 'rtl', 'replace' );
 
+    wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBRv4vuq_JLndAafOVc12UmEZaWQEQ5GdI&callback=Function.prototype' ); 
+    wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/acf-map.js', array('jquery', 'google-maps'), '', true);
+
 	wp_enqueue_script( 'amconsult-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -175,4 +178,15 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Set `Google API setting.
+ */
+
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyBRv4vuq_JLndAafOVc12UmEZaWQEQ5GdI';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
 
