@@ -165,6 +165,20 @@ get_header();
             </div>
         </div>
         <hr />
+        <div class="image-text">
+            <?php if( get_field('image_text_image') ): ?>
+                <img class="image-text-image" src='<?php the_field('image_text_image'); ?>'>
+            <?php endif; ?>
+            <div class="image-text-content">
+                <?php if( get_field('image_text_header') ): ?>
+                    <h2 class="image-text-heading"><?php the_field('image_text_header'); ?></h2>
+                <?php endif; ?>
+                <?php if( get_field('image_text_text') ): ?>
+                    <p class="image-text-text"><?php the_field('image_text_text'); ?></p>
+                <?php endif; ?>
+            </div>
+        </div>
+        <hr />
         <div class="cta">
             <div class="form">
             <?php get_template_part( 'template-parts/content', 'home' ); ?>

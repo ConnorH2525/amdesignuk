@@ -1108,11 +1108,11 @@ hr {
 
 .cta {
     display: flex;
-    margin: 3vh 10%;
-    padding: 4vw;
-    -moz-box-shadow: 0 0 3px #ccc;
-    -webkit-box-shadow: 0 0 3px #ccc;
-    box-shadow: 0 0 3px #ccc;
+    margin: 3vh 15%;
+    padding: 3vw;
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
 }
 
 .wpforms-title {
@@ -1152,7 +1152,7 @@ input, textarea {
     float: left;
     width: 60%;
     text-align: left;
-    margin-right: 2vw;
+    margin-right: 1.5vw;
 }
 
 .wpforms-submit {
@@ -1169,7 +1169,7 @@ input, textarea {
 .map {
     float: left;
     width: 30vw;
-    margin: auto 0 auto 2vw;
+    margin: auto 0 auto 1.5vw;
 }
 
 .acf-map {
