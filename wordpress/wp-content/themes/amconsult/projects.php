@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home Page
+ * Template Name: Projects Page
  */
 
 get_header();
@@ -135,6 +135,8 @@ get_header();
 
         })(jQuery);
         </script>
+        
+        <?php $frontpage_id = get_option( 'page_on_front' ); ?>
 
         <div class="hero">
             <?php if( get_field('hero_image') ): ?>
@@ -152,88 +154,12 @@ get_header();
                 <?php endif; ?>
             </div>
         </div>
-		<div class="partners">
-            <h3 class="partners-heading"><?php the_field('partners_heading'); ?></h3>
-            <div id="partner-icons">
-                <?php if( get_field('partner_1') ): ?>
-                    <img class="partner" src='<?php the_field('partner_1'); ?>'>
-                <?php endif;
-                if( get_field('partner_2') ): ?>
-                    <img class="partner" src='<?php the_field('partner_2'); ?>'>
-                <?php endif;
-                if( get_field('partner_3') ): ?>
-                    <img class="partner" src='<?php the_field('partner_3'); ?>'>
-                <?php endif;
-                if( get_field('partner_4') ): ?>
-                    <img class="partner" src='<?php the_field('partner_4'); ?>'>
-                <?php endif;
-                if( get_field('partner_5') ): ?>
-                    <img class="partner" src='<?php the_field('partner_5'); ?>'>
-                <?php endif;
-                if( get_field('partner_6') ): ?>
-                    <img class="partner" src='<?php the_field('partner_6'); ?>'>
-                <?php endif;
-                if( get_field('partner_7') ): ?>
-                    <img class="partner" src='<?php the_field('partner_7'); ?>'>
-                <?php endif; ?>
-            </div>
-        </div>
-        <hr />
-        <div class="image-text">
-            <?php if( get_field('image_text_image') ): ?>
-                <img class="image-text-image" src='<?php the_field('image_text_image'); ?>'>
-            <?php endif; ?>
-            <div class="image-text-content">
-                <?php if( get_field('image_text_header') ): ?>
-                    <h2 class="image-text-heading"><?php the_field('image_text_header'); ?></h2>
-                <?php endif;
-                if( get_field('image_text_text') ): ?>
-                    <p class="image-text-text"><?php the_field('image_text_text'); ?></p>
-                <?php endif; ?>
-            </div>
-        </div>
-        <hr />
-        <div class="three-col-info">
-            <div class="three-col-section">
-                <?php if( get_field('3_column_icon_1') ): ?>
-                    <img class="three-col-icon" src="<?php the_field('3_column_icon_1'); ?>">
-                <?php endif;
-                if( get_field('3_column_heading_1') ): ?>
-                    <h3 class="three-col-heading"><?php the_field('3_column_heading_1'); ?></h3>
-                <?php endif;
-                if( get_field('3_column_text_1') ): ?>
-                    <p class="three-col-text"><?php the_field('3_column_text_1'); ?></p>
-                <?php endif; ?>
-            </div>
-            <div class="three-col-section">
-                <?php if( get_field('3_column_icon_2') ): ?>
-                    <img class="three-col-icon" src="<?php the_field('3_column_icon_2'); ?>">
-                <?php endif;
-                if( get_field('3_column_heading_2') ): ?>
-                    <h3 class="three-col-heading"><?php the_field('3_column_heading_2'); ?></h3>
-                <?php endif;
-                if( get_field('3_column_text_2') ): ?>
-                    <p class="three-col-text"><?php the_field('3_column_text_2'); ?></p>
-                <?php endif; ?>
-            </div>
-            <div class="three-col-section">
-                <?php if( get_field('3_column_icon_3') ): ?>
-                    <img class="three-col-icon" src="<?php the_field('3_column_icon_3'); ?>">
-                <?php endif;
-                if( get_field('3_column_heading_3') ): ?>
-                    <h3 class="three-col-heading"><?php the_field('3_column_heading_3'); ?></h3>
-                <?php endif;
-                if( get_field('3_column_text_3') ): ?>
-                    <p class="three-col-text"><?php the_field('3_column_text_3'); ?></p>
-                <?php endif; ?>
-            </div>
-        </div>
         <div class="cta">
             <div class="form">
             <?php get_template_part( 'template-parts/content', 'home' ); ?>
             </div>
             <div class="map">
-                <?php $map = get_field('map');
+                <?php $map = get_field('map', $frontpage_id);
                     if( $map ): ?>
 
                     <div class="acf-map">

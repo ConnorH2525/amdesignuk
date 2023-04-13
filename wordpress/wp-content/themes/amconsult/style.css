@@ -985,6 +985,7 @@ body, html {
 h2 {
     font-size: calc(1rem + 2vw);
     font-weight: 600;
+    line-height: calc(1rem + 2.5vw);
 }
 
 h3 {
@@ -1001,6 +1002,8 @@ b {
     font-weight: 700;
 }
 
+/*========HEADER=======*/
+
 .entry-header {
     display: none;
 }
@@ -1014,12 +1017,12 @@ b {
     margin: auto auto auto 10%;
 }
 
-.main-navigation {
+header .main-navigation {
     margin: auto;
     max-width: 20%;
 }
 
-.main-navigation ul {
+header .main-navigation ul {
     display: flex;
     justify-content: space-between;
     margin-left: -20%;
@@ -1027,16 +1030,16 @@ b {
     text-transform: uppercase;
 }
 
-.main-navigation a:visited {
+header .main-navigation a:visited {
     color: inherit;
 }
 
-.main-navigation a:hover {
+header .main-navigation a:hover {
     color: inherit;
     font-weight: 700;
 }
 
-.main-navigation .current-menu-item a {
+header .main-navigation .current-menu-item a {
     color: inherit;
     text-decoration: underline;
     font-weight: 700;
@@ -1045,6 +1048,91 @@ b {
 .social-links {
     margin: auto 10% auto auto;
 }
+
+/*========FOOTER==========*/
+
+footer {
+    color: white;
+    background-color: #2E5793;
+    padding: 4vh 10%;
+    text-align: left;
+}
+
+.footer-top {
+    display: flex;
+    vertical-align: bottom;
+}
+
+.footer-logo {
+    float: left;
+    width: 5%;
+}
+
+.footer-top hr {
+    float: left;
+    width: 100%;
+    margin: auto 0 0 1vw;
+}
+
+.site-info {
+    display: flex;
+    margin-top: 3vh;
+}
+
+footer .main-navigation ul {
+    display: block;
+    text-transform: uppercase;
+}
+
+footer .main-navigation a {
+    color: inherit;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+footer .main-navigation, footer .social-links {
+    float: left;
+    width: 25%;
+    margin: 0;
+}
+
+.address, .contact {
+    float: left;
+    width: 20%;
+    margin: 0 2.5%;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+footer h4 {
+   margin-top: 0;
+}
+
+footer .social-links {
+    text-align: right;
+}
+
+.spacer {
+    width: 100%;
+    height: 15vh;
+}
+
+.footer-bottom {
+    display: flex;
+}
+
+.privacy-link, .footer-info {
+    float: left;
+}
+
+.privacy-link {
+    margin-left: auto;
+}
+
+/*========CONTENT=========*/
 
 
 .hero {
@@ -1067,7 +1155,12 @@ b {
 .hero-heading {
     color: white;
     margin-top: 0;
-    line-height: calc(1rem + 2.5vw);
+}
+
+.hero-text {
+    color: white;
+    font-size: calc(1rem + 0.3vw);
+    font-weight: 300;
 }
 
 .hero-cta {
@@ -1106,19 +1199,79 @@ hr {
     margin: 0 10%;
 }
 
+.image-text {
+    padding: 0 10%;
+    display: flex;
+}
+
+.image-text-image {
+    float: left;
+    width: 50%;
+    padding: 6vh 6vh 6vh 0;
+}
+
+.image-text-content {
+    float: left;
+    width: 50%;
+    text-align: left;
+    margin: auto;
+}
+
+.image-text p {
+    font-size: calc(1rem + 0.3vw);
+    font-weight: 300;
+}
+
+.image-text p, .image-text h2 {
+    margin: 0.5em 0;
+}
+
+.three-col-info {
+    display: flex;
+    margin: 4vh 10%;
+}
+
+.three-col-section {
+    float: left;
+    width: 33%;
+    padding: 0 3vw;
+}
+
+.three-col-icon {
+    width: 40%;
+}
+
+.three-col-heading {
+    color: inherit; 
+    font-weight: 600;
+    font-size: calc(1rem + 0.8vw);
+    letter-spacing: normal;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.three-col-text {
+    font-size: calc(0.8rem + 0.2vw);
+    font-weight: 300;
+    margin: 0;
+}
+
+/*=========CONTACT FORM=========*/
+
 .cta {
     display: flex;
-    margin: 3vh 15%;
+    margin: 3vh 15% 10vh 15%;
     padding: 3vw;
-    -moz-box-shadow: 0 0 5px #ccc;
-    -webkit-box-shadow: 0 0 5px #ccc;
-    box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 5px 10px #ccc;
+    -webkit-box-shadow: 0 5px 10px #ccc;
+    box-shadow: 0 5px 10px #ccc;
+    border-radius: 8px;
 }
 
 .wpforms-title {
     color: inherit !important; 
     font-weight: 600 !important;
-    font-size: calc(1rem + 1.2vw) !important;
+    font-size: calc(1rem + 0.8vw) !important;
 }
 
 .wpforms-description {
@@ -1182,4 +1335,8 @@ input, textarea {
 // Fixes potential theme css conflict.
 .acf-map img {
    max-width: inherit !important;
+}
+
+.entry-footer {
+    display: none;
 }
