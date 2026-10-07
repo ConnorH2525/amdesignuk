@@ -8,7 +8,7 @@ get_header();
 
 	<main id="primary" class="site-main">
         
-<!--        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRv4vuq_JLndAafOVc12UmEZaWQEQ5GdI&callback=Function.prototype"></script>-->
+<!--        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY_HERE&callback=Function.prototype"></script>-->
         <script type="text/javascript">
         (function( $ ) {
 
